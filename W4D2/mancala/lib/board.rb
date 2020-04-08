@@ -35,9 +35,21 @@ class Board
   end
 
   def make_move(start_pos, current_player_name)
-    count = start_pos.dup.length
-    start_pos = []
-    #TBD
+       stones = @cups[start_pos]
+       @cups[start_pos] = []
+   
+       idx = start_pos
+       until stones.empty?
+        idx += 1
+        idx = 0 if idx > 13
+         if idx == 6
+           @cups[6] << stones.pop if current_player_name == @name1
+         elsif cup_idx == 13
+           @cups[13] << stones.pop if current_player_name == @name2
+         else
+           @cups[cup_idx] << stones.pop
+         end
+       end
   end
 
   def next_turn(ending_cup_idx)

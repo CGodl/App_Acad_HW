@@ -18,33 +18,34 @@ end
 
 p sluggish_octopus(['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh'])
 
-# def dominant_octopus(array)
-#   return array if array.length <= 1
+def dominant_octopus(array, &prc)
+  prc ||= Proc.new {|a, b| a.length <=> b.length}
+  return array if array.length == 1
 
-#   mid = array.length / 2
-#   ans = dom_helper(dominant_octopus(array[0...mid]), dominant_octopus(array[mid..-1]))
-#   return ans.last
-# end
+  mid = array.length / 2
+  ans = dom_helper(dominant_octopus(array[0...mid], &prc), dominant_octopus(array[mid..-1], &prc), &prc)
+  return ans.last
+end
 
 
-# def dom_helper(left, right)
-#   merged = []
+def dom_helper(left, right, &prc)
+  merged = []
 
-#   until left.empty? || right.empty?
-#     case left[0].length <=> right[0].length
-#     when 1
-#       merged << right.shift
-#     when 0
-#       merged << right.shift
-#     when -1
-#       merged << left.shift
-#     end
-#   end
+  until left.empty? || right.empty?
+    case prc.call(left.first, right.first)
+    when -1
+      merged << left.first
+    when 0
+      merged << right.first
+    when 1
+      merged << right.first
+    end
+  end
    
-#   merged + left + right
-# end
+  merged + left + right
+end
 
-# p dominant_octopus(['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh'])
+#p dominant_octopus(['fish', 'fiiish', 'fiiiiish', 'fiiiish', 'fffish', 'ffiiiiisshh', 'fsh', 'fiiiissshhhhhh'])
 
 
 
@@ -73,12 +74,10 @@ end
 p slow_dance("left", tiles_array)
 
 def constant_dance(target, array)
-  until (target == array[0] || array.empty?)
-    array.shift
-  end
-
+  return array.index(target)
 end
+
+tiles_array = ["up", "right-up", "right", "right-down", "down", "left-down", "left",  "left-up" ]
 
 
 p constant_dance("left", tiles_array)
-

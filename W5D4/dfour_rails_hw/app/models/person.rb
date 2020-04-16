@@ -6,7 +6,7 @@ class Person < ApplicationRecord
 
   belongs_to(:house, {
     primary_key: :id,
-
+    foreign_key: 
     class_name: :Toy
   })
 

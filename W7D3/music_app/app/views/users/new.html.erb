@@ -1,0 +1,29 @@
+<h1> This is dummy text</h1>
+
+<% if flash.now[:errors]%>
+  <ul>
+      <%flash.now[:errors].each do |error|%>
+         <li> <%= error %> </li>
+      <% end %>
+  </ul>
+<%end%>
+
+
+
+
+
+<form action="<%= users_url %>" method="POST">
+
+<label for="email">Email:</label>
+<input id="email" type="text" name="user[email]" value="">
+<br>
+<label for="password">Password:</label>
+<input id="password" type="text" name="user[password]" value="">
+
+<input type="submit" value="Register an account">
+
+
+
+
+
+</form>

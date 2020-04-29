@@ -1,0 +1,26 @@
+<h1> Welcome to the band page</h1>
+
+<% if flash.now[:errors]%>
+  <ul>
+      <%flash.now[:errors].each do |error|%>
+         <li> <%= error %> </li>
+      <% end %>
+  </ul>
+<%end%>
+
+
+
+
+
+<form action="<%= users_url %>" method="POST">
+
+<label for="name">Name:</label>
+<input id="name" type="text" name="band[name]" value="">
+<br>
+<input type="submit" value="Setup a band">
+
+
+
+
+
+</form>

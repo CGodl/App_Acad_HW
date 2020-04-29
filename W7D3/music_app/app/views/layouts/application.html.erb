@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  
+
+  <body>
+  <header> 
+    <ul>
+      <style>
+        header li {
+          display: flex;
+          text-align: right;
+          background-color: red;
+        }
+      </style>
+
+      <li>INSERT LOG STATUS (RUBY CODE)</li>
+  Welcome to Music App. The top place to maintain your music!
+  </header>
+    <p>  </p>
+
+
+
+    <%= yield %>
+  </body>
+</html>

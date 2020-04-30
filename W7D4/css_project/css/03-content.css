@@ -1,0 +1,101 @@
+/* PHASE 3: Content */
+
+
+
+.header {
+  background-color: red;
+  border-bottom: 1px solid #aaa;
+  font-display: white;
+}
+
+.header-logo {
+  color: white;
+  
+}
+
+.header-nav {
+  width: 660px;
+  margin: auto;
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+
+
+}
+
+.header a {
+  display: block;
+  padding: 10px;
+}
+
+
+.header-logo {
+  float: left;
+  font-weight: bold;
+}
+
+.header-logo:hover {
+  background-color: black;
+  color: white;
+}
+
+.header-list {
+  float: right;
+}
+
+.header-list > li {
+  float: left;
+  border-left: 1px solid #aaa;
+}
+
+.header-list > li:hover {
+  background-color: black;
+  color: white;
+}
+
+body {
+  /* Write your css here... */
+  font-family: sans-serif;
+  font-weight: 400, 700;
+  font-size: 24px, 16px, 14px;
+  background: #eee;
+
+}
+
+
+
+
+.content {
+  background-color: white;
+  width: 900px;
+  margin: auto;
+  border-bottom: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #aaa;
+}
+
+.header-logo {
+  color: white;
+  
+}
+
+.content-sidebar {
+  width: 230px;
+  float: left;
+  padding: 5px;
+}
+
+.content-main {
+  width: 640px;
+  float: left;
+  padding: 10px;
+}
+
+.content h1 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.content p {
+
+}

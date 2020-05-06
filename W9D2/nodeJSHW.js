@@ -69,17 +69,32 @@ isSubstring("Jump for joy", "joys");
 
 
 function fizzBuzz(array) {
-  array.forEach(el =>)
-
-
-  array.forEach(threeOrFive)
+  const answer = []
+  i = 0
+  while (i < array.length) {
+    if (array[i] % 3 === 0 || array[i] % 5 === 0) {
+      answer.push(array[i])
+    }
+    i++
+  }
+  console.log(answer)
 }
 
 fizzBuzz([1, 2, 3, 4, 5])
 
 
 function isPrime(num) {
-  return (num %)
+}
+
+function primeCheck(n) {
+  i = 2
+  while (i < num) {
+    if (num % i === 0 || n <= 2) {
+      console.log(false);
+      break;
+    }
+  }
+  console.log(true);
 }
 
 isPrime(2) //true

@@ -8,7 +8,7 @@ function titleize(array, callback) {
 }
 
 
-console.log(titleize(["Mary", "Brian", "Leo"], printCallback));
+// console.log(titleize(["Mary", "Brian", "Leo"], printCallback)); Doesnt work
 
 
 ////////////////////////////////////////////////
@@ -51,6 +51,8 @@ let herd = [ellie, charlie, kate, micah];
 
 // Array.prototype.myEach = function
 
-function paradeHelper(name) {
+Elephant.prototype.paradeHelper = function(name) {
   console.log(`${name} is trotting by!`);
 };
+
+//herd.forEach((elephant) => Elephant.paradeHelper(elephant.name)); Review why this doesnt work

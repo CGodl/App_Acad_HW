@@ -5,9 +5,8 @@ console.log("Hello from the JavaScript console!");
 // const onSuccess = console.log('http://api.openweathermap.org/data/2.5/weather?q=new%20york,US&appid=bcb83c4b54aee8418983c2aff3073b3b')
 // const onFail = console.log('https://home.openweathermap.org/users/sign_up')
 // const testUrl = 'http://api.openweathermap.org/data/2.5/weather?q=new%20york,US&appid=bcb83c4b54aee8418983c2aff3073b3b'
-)
   $.ajax ({
-    url: http://api.openweathermap.org/data/2.5/weather?q=new%20york,US&appid=bcb83c4b54aee8418983c2aff3073b3b,
+    url: 'http://api.openweathermap.org/data/2.5/weather?q=new%20york,US&appid=bcb83c4b54aee8418983c2aff3073b3b',
     type: 'GET',
     success(data) {
       console.log("Success")

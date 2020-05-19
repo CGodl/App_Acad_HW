@@ -11,9 +11,9 @@ class Calculator extends React.Component {
     this.setNum1 = this.setNum1.bind(this);
     this.setNum2 = this.setNum2.bind(this);
     this.setDivide = this.setDivide.bind(this);
-    this.setMultiply = this.setDivide.bind(this);
-    this.setAdd = this.setDivide.bind(this);
-    this.setSubtract = this.setDivide.bind(this);
+    this.setMultiply = this.setMultiply.bind(this);
+    this.setAdd = this.setAdd.bind(this);
+    this.setSubtract = this.setSubtract.bind(this);
     this.clear = this.setClear.bind(this);
   }
 
